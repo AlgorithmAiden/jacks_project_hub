@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Fira Code';
+    src: url('../../firaCode.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden auto;
+    background-color: #000;
+    font-family: 'Fira Code';
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vm;
+    z-index: 1;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    width: 80%;
+    background-color: #3336;
+    border: 5px solid #15661566;
+    margin: 50px 0 50px 0;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #content {
+        width: 95%;
+    }
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: #000;
+    border: 2px solid #333;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    background-color: #6669;
+    border: 5px solid #3339;
+    padding: 5px;
+    text-align: center;
+    color: #0f0;
+}
+
+#returnButton {
+    background-color: #6669;
+    border: 5px solid #3339;
+    padding: 5px;
+    text-align: center;
+}
+
+#returnButton>a {
+    color: #0f0
+}
+
+#post {
+    background-color: #6669;
+    margin: 10px;
+    padding: 25px;
+    border: 5px solid #3339;
+}
+
+#backgroundCanvas {
+    position: fixed;
+    display: block;
+}
+
+img,
+video {
+    width: 100%;
+    object-fit:fill;
+    border: 5px solid #3339;
+}
+
+.video_wrapper {
+    filter: blur(5px) saturate(.5);
+    color: #0000;
+    transition: all .25s ease-in-out
+}
+
+.video_wrapper:hover {
+    filter: blur(0) saturate(1);
+    color: #fff;
+}
+
+.video_wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#returnToTopButton {
+    background-color: #6669;
+    border: 5px solid #3339;
+    padding: 5px;
+    text-align: center;
+    color: #0f0;
+    text-decoration: underline;
+}
+
+#returnToTopButton span {
+    cursor: pointer;
+}
